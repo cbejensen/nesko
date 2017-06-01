@@ -13,7 +13,7 @@ export default function Header(props) {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'tomato'
+    backgroundColor: '#0d9d00'
   },
   inner: {
     flex: 1,

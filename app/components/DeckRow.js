@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import {
   View,
   Text,
@@ -26,6 +27,9 @@ export default function DeckRow(props) {
           Cards: {props.cards.length}
         </Text>
         <Text>Average score: {avg}</Text>
+        <Text>
+          Created {moment(props.created).fromNow()}
+        </Text>
       </View>
     </TouchableHighlight>
   );

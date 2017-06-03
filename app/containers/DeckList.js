@@ -17,6 +17,7 @@ class DeckList extends Component {
     const decks = [
       {
         name: 'New Testament',
+        created: '2017-06-02',
         cards: [
           {
             front: '1 Timothy 3:16',
@@ -32,6 +33,7 @@ class DeckList extends Component {
       },
       {
         name: 'Old Testament',
+        created: '2015-11-17',
         cards: [
           {
             front: 'Genesis 1:1',
@@ -50,7 +52,9 @@ class DeckList extends Component {
       <View>
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={rowData => <DeckRow {...rowData} {...this.props} />}
+          renderRow={rowData => (
+            <DeckRow {...rowData} {...this.props} />
+          )}
           renderSeparator={() => <RowSeparator />}
         />
       </View>

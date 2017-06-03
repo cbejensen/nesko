@@ -21,12 +21,12 @@ class DeckList extends Component {
           {
             front: '1 Timothy 3:16',
             back: 'All Scripture is God-breathed',
-            score: 4
+            score: 3
           },
           {
             front: 'John 1:1',
             back: 'In the beginning was the Word',
-            score: 5
+            score: 4
           }
         ]
       },
@@ -48,10 +48,9 @@ class DeckList extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.header}>My Decks</Text>
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={rowData => <DeckRow {...rowData} />}
+          renderRow={rowData => <DeckRow {...rowData} {...this.props} />}
           renderSeparator={() => <RowSeparator />}
         />
       </View>

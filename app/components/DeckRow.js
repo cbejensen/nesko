@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 
 export default function DeckRow(props) {
+  const { navigate } = props.navigation;
   let total = 0;
   props.cards.forEach(card => {
     total += card.score;
@@ -16,6 +17,8 @@ export default function DeckRow(props) {
     <TouchableHighlight
       style={styles.container}
       underlayColor="#ffffff"
+      onPress={() =>
+        navigate('Deck', { title: props.name })}
     >
       <View>
         <Text style={styles.name}>{props.name}</Text>
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
     padding: 10
   },
   name: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold'
   }
 });

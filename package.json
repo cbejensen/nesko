@@ -5,6 +5,9 @@
   "author": null,
   "private": true,
   "main": "main.js",
+  "scripts": {
+    "start": "exp start -i --localhost"
+  },
   "dependencies": {
     "expo": "17.0.0",
     "react": "16.0.0-alpha.6",

@@ -1,26 +1,10 @@
 import React from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
-import { View, Text, StyleSheet } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+import { MyDecks, Deck } from './screens';
 
-export default function App(props) {
-  return (
-    <View style={styles.app}>
-      <Header style={styles.header} />
-      <Main style={styles.main} />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  app: {
-    flex: 1
-  },
-  header: {
-    height: 60,
-    paddingTop: 15
-  },
-  main: {
-    flex: 1
-  }
+const App = StackNavigator({
+  Decks: { screen: MyDecks },
+  Deck: {screen: Deck}
 });
+
+export default App;
